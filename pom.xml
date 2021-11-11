@@ -14,7 +14,12 @@
 	<name>ProductService</name>
 	<description>Product  MicroService </description>
 	<properties>
-		<java.version>11</java.version>
+		<java.version>11</java.version><sonar.projectKey>tummapushpa_product
+</sonar.projectKey>
+<sonar.organization>tummapushpa</sonar.organization>
+<sonar.host.url>https://sonarcloud.io/</sonar.host.url>
+<sonar.login>d5b4bbae1af08205dc96b00dcd3ccb454ec71acd</sonar.login>
+		
 	</properties>
 	<dependencies>
 	
@@ -50,12 +55,20 @@
 	</dependencies>
 
 	<build>
+		<pluginManagement>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
+			
+      <plugin>
+        <groupId>org.codehaus.sonar</groupId>
+        <artifactId>sonar-maven-plugin</artifactId>
+        <version>2.5.6</version>
+      </plugin>
 		</plugins>
+			</pluginManagement>
 	</build>
 
 </project>
